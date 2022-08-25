@@ -1,26 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+$accent: #74eabf;
+$light: #fff;
+$dark1: #14161A;
+$dark2: #1F2126;
+$dark3: #292C33;
+$dark4: #333740;
+$font-xl: 24px;
+$font-l: 16px;
+$font-m: 14px;
+$font-s: 12px;
+$font-xs: 10px;
 
 *{
 	padding: 0;
 	margin: 0;
-	font-family: 'Space Mono', sans-serif;
+	font-family: 'Work Sans', sans-serif;
 }
 
 body {
-	background-color: #14161a;
-	width: 600px;
-	margin: 0 auto;
-	margin-top: 40px;
+	background-color: $dark1;
+	width: 540px;
+	margin: 40px auto;
 }
 
 .main{
-	background-color: #1F2126;
+	background-color: $dark2;
 	padding: 40px;
 }
 
 .container{
-	margin-bottom: 80px;
+	margin-bottom: 96px;
+}
+
+.heading{
+	font-size: $font-l;
+	color: $light;
+}
+
+.btn{
+	color: $dark2;
+	background-color: $accent;
+	border: none;
+	padding: 10px 20px;
+	font-size: $font-s;
+	font-weight: bold;
+}
+
+.btn:hover, .btn:focus{
+	filter: brightness(.8);
+	outline: none;
+}
+
+*:focus{
+	outline: 1px $light solid;
+	outline-offset: -1px;
 }
 
 nav{
@@ -28,18 +62,20 @@ nav{
 	justify-content: space-between;
 
 	.logo{
-		color: #fff;
+		color: $light;
 		font-weight: bold;
-		font-size: 16px;
+		font-size: $font-l;
 	}
 
 	a{
-		color: rgba(#fff, .85);
+		color: rgba($light, .85);
 		text-decoration: none;
 	}
 
-	a:hover{
+	a:hover, a:focus{
 		text-decoration: underline;
+		color: $light;
+		outline: none;
 	}
 
 	.nav-links{
@@ -50,7 +86,7 @@ nav{
 
 		a{
 			margin-left: 10px;
-			font-size: 14px;
+			font-size: $font-m;
 		}
 	}
 }
@@ -62,7 +98,7 @@ nav{
 	.rects{
 		width: 200px;
 		height: 140px;
-		background-color: #292C33;
+		background-color: $dark3;
 		position: relative;
 	
 		.rect{
@@ -72,7 +108,7 @@ nav{
 		.rect.mid{
 			width: 100px;
 			height: 140px;
-			background-color: #74EABF;
+			background-color: $accent;
 			bottom: 20px;
 			right: 20px;
 		}
@@ -80,7 +116,7 @@ nav{
 		.rect.front{
 			width: 100px;
 			height: 80px;
-			background-color: #333740;
+			background-color: $dark4;
 			top: 20px;
 			left: 20px;
 		}
@@ -95,23 +131,100 @@ nav{
 
 	.top{
 		.heading{
-			font-size: 24px;
-			color: #fff;
+			font-size: $font-xl;
+			font-weight: bold;
+			color: $light;
 
 			span{
-				color: #74EABF;
+				color: $accent;
 			}
 		}
 
 		.subheading{
-			color: rgba(#fff, .85);
-			font-size: 14px;
+			color: rgba($light, .85);
+			font-size: $font-m;
+			font-weight: lighter;
 			margin-top: 20px;
 		}
 	}
 
 	.scroll-down{
-		font-size: 12px;
-		color: rgba(#fff, .75);
+		font-size: $font-s;
+		color: rgba($light, .75);
+	}
+}
+
+.projects{
+	.top{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+
+		.btns button{
+			background-color: transparent;
+			border: none;
+			font-size: $font-xl;
+			color: $light;
+			margin-left: -8px;
+		}
+
+		.btns button:disabled{
+			color: rgba($light, .5);
+		}
+	}
+
+	.items{
+		display: flex;
+		justify-content: space-between;
+
+		.item{
+			position: relative;
+
+			.img{
+				background-color: $dark3;
+				width: 220px;
+				height: 180px;
+			}
+
+			.title{
+				position: absolute;
+				left: 20px;
+				bottom: 20px;
+				color: $light;
+				font-size: $font-m;
+				// padding: 20px;
+				// background-color: $dark4;
+			}
+		}
+	}
+}
+
+.contact{
+	margin: 0;
+	.heading{
+		margin-bottom: 20px;
+	}
+
+	form{
+		display: flex;
+		flex-direction: column;
+
+		input{
+			height: 36px;
+			padding: 0 10px;
+		}
+
+		input, textarea{
+			margin-bottom: 10px;
+			border: none;
+			background-color: $dark1;
+			color: #fff;
+			font-size: $font-s;
+		}
+
+		textarea{
+			padding: 10px;
+		}
 	}
 }
