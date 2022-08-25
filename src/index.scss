@@ -6,21 +6,22 @@ $dark1: #14161A;
 $dark2: #1F2126;
 $dark3: #292C33;
 $dark4: #333740;
-$font-xl: 24px;
-$font-l: 16px;
-$font-m: 14px;
-$font-s: 12px;
-$font-xs: 10px;
+$font-xl: 32px;
+$font-l: 24px;
+$font-m: 18px;
+$font-s: 16px;
+$font-xs: 14px;
 
 *{
 	padding: 0;
 	margin: 0;
 	font-family: 'Work Sans', sans-serif;
+	scroll-behavior: smooth;
 }
 
 body {
 	background-color: $dark1;
-	width: 540px;
+	width: 700px;
 	margin: 40px auto;
 }
 
@@ -30,7 +31,7 @@ body {
 }
 
 .container{
-	margin-bottom: 96px;
+	margin-bottom: 140px;
 }
 
 .heading{
@@ -38,11 +39,15 @@ body {
 	color: $light;
 }
 
+button{
+	cursor: pointer;
+}
+
 .btn{
 	color: $dark2;
 	background-color: $accent;
 	border: none;
-	padding: 10px 20px;
+	padding: 20px;
 	font-size: $font-s;
 	font-weight: bold;
 }
@@ -96,8 +101,8 @@ nav{
 	justify-content: space-between;
 
 	.rects{
-		width: 200px;
-		height: 140px;
+		width: 220px;
+		height: 160px;
 		background-color: $dark3;
 		position: relative;
 	
@@ -106,16 +111,16 @@ nav{
 		}
 	
 		.rect.mid{
-			width: 100px;
-			height: 140px;
+			width: 120px;
+			height: 160px;
 			background-color: $accent;
 			bottom: 20px;
 			right: 20px;
 		}
 	
 		.rect.front{
-			width: 100px;
-			height: 80px;
+			width: 120px;
+			height: 100px;
 			background-color: $dark4;
 			top: 20px;
 			left: 20px;
@@ -166,7 +171,6 @@ nav{
 			border: none;
 			font-size: $font-xl;
 			color: $light;
-			margin-left: -8px;
 		}
 
 		.btns button:disabled{
@@ -180,28 +184,30 @@ nav{
 
 		.item{
 			position: relative;
+			text-decoration: none;
 
 			.img{
-				background-color: $dark3;
-				width: 220px;
+				// background-color: $dark3;
+				background-size: cover;
+				background-position: top;
+				width: 290px;
 				height: 180px;
 			}
 
 			.title{
-				position: absolute;
+				// position: absolute;
 				left: 20px;
 				bottom: 20px;
 				color: $light;
 				font-size: $font-m;
-				// padding: 20px;
-				// background-color: $dark4;
+				padding: 20px;
+				background-color: $dark4;
 			}
 		}
 	}
 }
 
 .contact{
-	margin: 0;
 	.heading{
 		margin-bottom: 20px;
 	}
@@ -211,8 +217,8 @@ nav{
 		flex-direction: column;
 
 		input{
-			height: 36px;
-			padding: 0 10px;
+			height: 64px;
+			padding: 0 20px;
 		}
 
 		input, textarea{
@@ -224,7 +230,33 @@ nav{
 		}
 
 		textarea{
-			padding: 10px;
+			padding: 20px;
+		}
+	}
+}
+
+footer{
+	margin: 0 !important;
+	color: rgba($light, .85);
+	font-size: $font-xs;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.nav-links{
+		list-style: none;
+		display: flex;
+		align-items: center;
+
+		a{
+			margin-left: 10px;
+			text-decoration: none;
+			color: rgba($light, .85);
+		}
+
+		a:hover, a:focus{
+			text-decoration: underline;
+			outline: none;
 		}
 	}
 }

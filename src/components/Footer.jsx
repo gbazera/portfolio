@@ -1,14 +1,14 @@
-function Header() {
+function Footer() {
     return(
-        <nav className="container">
-            <a className="logo" href="/#">giorgi bazerashvili</a>
+        <footer className="container">
+            <p>gbazera.netlify.app - all rights reserved</p>
             <ul className="nav-links">
                 <li><a href="/#">home</a></li>
                 <li><a href="/#projects">projects</a></li>
                 <li><a href="/#contact">contact</a></li>
             </ul>
-        </nav>
+        </footer>
     );
 }
 
-export default Header;
+export default Footer;
