@@ -9,11 +9,11 @@ function Projects() {
                 </div>
             </div>
             <div className="items">
-                <a className="item" href="#">
+                <a className="item">
                     <div className="img"></div>
                     <p className="title">project 1</p>
                 </a>
-                <a className="item" href="#">
+                <a className="item">
                     <div className="img"></div>
                     <p className="title">project 2</p>
                 </a>
