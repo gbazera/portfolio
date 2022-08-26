@@ -65,6 +65,8 @@ button{
 nav{
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	height: 36px;;
 
 	.logo{
 		color: $light;
@@ -257,6 +259,47 @@ footer{
 		a:hover, a:focus{
 			text-decoration: underline;
 			outline: none;
+		}
+	}
+}
+
+.burger{
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: $light;
+	font-size: $font-xl;
+}
+
+@media screen and (max-width: 900px) {
+	body{
+		width: 100%;
+		margin: 0;
+	}
+
+	nav{
+		.nav-links{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			height: calc(100% - 116px);
+			width: 100%;
+			background-color: $dark2;
+			flex-direction: column;
+			justify-content: center;
+			z-index: 1;
+			transform-origin: right;
+			transform: scaleX(0);
+			transition: transform .3s;
+
+			a{
+				display: block;
+				margin: 10px 0;
+			}
+		}
+
+		.nav-links.active{
+			transform: scaleX(1);
 		}
 	}
 }
