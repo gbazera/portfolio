@@ -3,10 +3,12 @@ import { useState } from "react";
 function Header() {
     const [burgerActive, setBurgerActive] = useState(false);
     const [navActive, setNavActive] = useState(false);
+    const body = document.body;
     
     const toggleMenu=()=>{
         setBurgerActive(!burgerActive);
         setNavActive(!navActive);
+        body.classList.toggle('overflow-hidden');
     }
 
     return(

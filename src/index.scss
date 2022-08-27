@@ -272,6 +272,11 @@ footer{
 	outline: none;
 	color: $light;
 	font-size: var(--font-xl);
+	display: none;
+}
+
+.overflow-hidden{
+	overflow: hidden;
 }
 
 @media screen and (max-width: 900px) {
@@ -284,20 +289,24 @@ footer{
 	}
 
 	body{
-		width: 100%;
-		margin: 0;
+		width: calc(100% - 40px);
+		margin: 20px;
+	}
+
+	.burger{
+		display: block;
 	}
 
 	nav{
 		.nav-links{
 			position: absolute;
 			bottom: 0;
-			right: 0;
+			right: 20px;
 			height: calc(100% - 116px);
-			width: 100%;
+			width: calc(100% - 40px);
 			background-color: $dark2;
 			flex-direction: column;
-			justify-content: center;
+			justify-content: start;
 			z-index: 1;
 			transform-origin: right;
 			transform: scaleX(0);
@@ -306,6 +315,10 @@ footer{
 			a{
 				display: block;
 				margin: 10px 0;
+			}
+
+			li:first-of-type a{
+				margin-top: 50px;
 			}
 		}
 
@@ -322,6 +335,10 @@ footer{
 		.right{
 			width: 100%;
 			text-align: left;
+		}
+
+		.scroll-down{
+			display: none;
 		}
 	}
 

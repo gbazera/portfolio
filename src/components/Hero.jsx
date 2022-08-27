@@ -11,7 +11,6 @@ function Hero() {
                     <p className="heading">hey, i'm <span>giorgi</span></p>
                     <p className="subheading">16 yo junior frontend developer</p>
                 </div>
-                <p className="scroll-down">scroll down <i className="bx bx-chevron-down"></i></p>
             </div>
         </div>
     );
