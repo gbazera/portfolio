@@ -1,5 +1,3 @@
-import { useRef, useState } from "react";
-
 function Header() {
     const [burgerActive, setBurgerActive] = useState(false);
     const [navActive, setNavActive] = useState(false);
